@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Bio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2C2F36;
+            color: #FFF;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #36393F;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #7289DA;
+        }
+        h1 {
+            margin-top: 20px;
+            color: #7289DA;
+        }
+        .bio {
+            font-size: 18px;
+            margin-top: 15px;
+            line-height: 1.5;
+        }
+        .discord-logo-link {
+            display: inline-block;
+            padding: 12px 25px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #FFF;
+            background-color: #7289DA;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-top: 25px;
+        }
+        .discord-logo-link:hover {
+            background-color: #5b6e9e;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+        .gif-container {
+            margin-top: 30px;
+        }
+        .gif-container img {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 10px;
+        }
+        /* ซ่อน Audio Player */
+        audio {
+           display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="profile-image" src="https://animesher.com/orig/0/46/469/4693/animesher.com_shawn-frost-gif-inazuma-eleven-469372.gif" alt="Profile GIF">
+        <h1>NONAME</h1>
+        <p class="bio">ไม่มีไรส่องทำไม</p>
+        <a class="discord-logo-link" href="https://www.canva.com/design/DAGl1Tw8OUM/wwCeJQJdI4TRdtk4dDncbg/view?utm_content=DAGl1Tw8OUM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h2efba25607" target="_blank">
+            มีอะไรจะให้ดู
+        </a>
+
+        <!-- === ส่วนของเพลงพื้นหลัง (เพิ่ม id) === -->
+        <audio id="background-audio" autoplay loop>
+            <!-- ***** สำคัญ: แก้ชื่อไฟล์เพลงตรงนี้ให้ตรงกับไฟล์เพลงของคุณ ***** -->
+            <source src="my-song.mp3" type="audio/mp3">
+            <!-- ***** (ตัวอย่างใช้ชื่อ my-song.mp3) ***** -->
+            Your browser does not support the audio element.
+        </audio>
+        <!-- === จบส่วนของเพลง === -->
+
+        <div class="gif-container">
+            <img src="https://animesher.com/orig/0/46/469/4693/animesher.com_shawn-frost-gif-inazuma-eleven-469372.gif" alt="Profile GIF">
+        </div>
+    </div>
+
+    <!-- JavaScript สำหรับปรับความดังเสียง -->
+    <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+        const audio = document.getElementById('background-audio');
+        if (audio) {
+          // ตั้งค่าระดับเสียง (0.0 คือเงียบสุด, 1.0 คือดังสุด)
+          // ลองปรับค่าตรงนี้ดู (เช่น 0.1, 0.15, 0.2, 0.25, 0.3)
+          audio.volume = 0.2; // <<< ตั้งค่าความดังตรงนี้ (0.2 = 20%)
+        }
+      });
+    </script>
+
+</body>
+</html>
